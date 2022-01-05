@@ -13,48 +13,62 @@ body {
   justify-content: center;
 } */
 
-/* белый цвет #FFFFFF */
-
-/* цвет основного текста #212121 */
-
-/* вторичный цвет текста #757575 */
-
-/* цвета лого #2196F3 #212121 */
-
-/* акцент #2196F3 */
-
-/* основной цвет фона #FFFFFF */
-
-/* вторичный цвет фона #F5F4FA #2F303A*/
-
 :root {
   --primary-text-color: #757575;
+  --secondary-text-color: #ffffff;
   --title-text-color: #212121;
   --accent-color: #2196f3;
   --primary-bg-color: #ffffff;
+  --secondary-bg-color: #f5f4fa;
+  --footer-bg-color: #2f303a;
 }
 
 body {
-  background-color: #ffffff;
+  background-color: var(--primary-bg-color);
   color: var(--primary-text-color);
+
+  font-family: Roboto, sans-serif;
+  letter-spacing: 0.03em;
 }
 
-ul {
+.site-nav,
+.contacts-nav,
+.features-list,
+.skills-list,
+.team-list,
+.address-list,
+.portfolio-filter,
+.work-examples-list {
   list-style: none;
 }
 
 .logo {
-  color: #212121;
+  color: var(--title-text-color);
+
+  font-family: Raleway, sans-serif;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 1.2;
 }
 
 .logo-span {
-  color: #2196f3;
+  color: var(--accent-color);
+
+  font-family: Raleway, sans-serif;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 1.19;
 }
 
 /* Site nav */
 
 .site-nav .link {
   color: var(--title-text-color);
+
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
 }
 
 .site-nav .link:hover,
@@ -68,52 +82,93 @@ ul {
 
 /* Connect nav */
 
-.connect-nav .link {
+.contacts-nav .link {
   color: var(--primary-text-color);
+
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
 }
 
-.connect-nav .link:hover,
-.connect-nav .link:focus {
+.contacts-nav .link:hover,
+.contacts-nav .link:focus {
   color: var(--accent-color);
 }
 
 /* Hero */
+/* Добавил цвет фона для того, чтобы увидеть текст */
 
 .hero-title {
-  color: #ffffff;
+  color: var(--secondary-text-color);
+  background-color: var(--footer-bg-color);
+
+  font-weight: 900;
+  font-size: 44px;
+  line-height: 1.36;
+  text-align: center;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
 }
 
 /* Section */
 
 .section-title {
   color: var(--title-text-color);
+
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.16;
+  text-align: center;
 }
 
 /* Features */
 
-.features-title {
+.features-list .title {
   color: var(--title-text-color);
+
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  text-transform: uppercase;
 }
 
+.features-list .text {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.71;
+}
 /* Team */
 
-.team-title {
+.team-list .title {
   color: var(--title-text-color);
 }
 
-/* Button */
+/* Buttons */
 
 .button {
   color: var(--title-text-color);
-  background-color: #f5f4fa;
+  background-color: var(--secondary-bg-color);
 }
 
 .button.primary {
-  color: #ffffff;
+  color: var(--secondary-text-color);
   background-color: var(--accent-color);
 }
 
 .button.secondary {
   color: var(--title-text-color);
-  background-color: #f5f4fa;
+  background-color: var(--secondary-bg-color);
+}
+
+/* Portfolio */
+
+.work-examples-list .title {
+  color: var(--title-text-color);
+}
+
+.portfolio-filter .button:hover,
+.portfolio-filter .button:focus {
+  color: var(--secondary-text-color);
+  background-color: var(--accent-color);
 }
