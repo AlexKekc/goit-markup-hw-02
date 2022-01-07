@@ -157,7 +157,6 @@ body {
 
   font-family: Roboto;
   font-style: normal;
-  font-weight: 400;
   font-size: 14px;
   line-height: 1.71;
   letter-spacing: 0.03em;
@@ -168,11 +167,18 @@ body {
   color: var(--secondary-text-color);
 }
 
+.address-list .link:hover,
+.address-list .link:focus {
+  color: var(--accent-color);
+}
+
 /* Buttons */
 
 .button {
   color: var(--title-text-color);
   background-color: var(--secondary-bg-color);
+
+  font-family: inherit;
   cursor: pointer;
 }
 
