@@ -16,20 +16,11 @@ body {
   letter-spacing: 0.03em;
 }
 
-.site-nav,
-.contacts-nav,
-.features-list,
-.skills-list,
-.team-list,
-.address-list,
-.portfolio-filter,
-.work-examples-list {
+.list {
   list-style: none;
 }
 
 .logo {
-  color: var(--title-text-color);
-
   font-family: Raleway, sans-serif;
   font-weight: 700;
   font-size: 26px;
@@ -37,13 +28,17 @@ body {
   text-decoration: none;
 }
 
-.logo .accent {
+.logo-accent {
   color: var(--accent-color);
+}
+
+.header-logo {
+  color: var(--title-text-color);
 }
 
 /* Site nav */
 
-.site-nav .link {
+.site-nav-link {
   color: var(--title-text-color);
 
   font-weight: 500;
@@ -53,18 +48,18 @@ body {
   text-decoration: none;
 }
 
-.site-nav .link:hover,
-.site-nav .link:focus {
+.site-nav-link:hover,
+.site-nav-link:focus {
   color: var(--accent-color);
 }
 
-.site-nav .link.current {
+.site-nav-link.current {
   color: var(--accent-color);
 }
 
 /* Connect nav */
 
-.contacts-nav .link {
+.contacts-nav-link {
   color: var(--primary-text-color);
 
   font-weight: 500;
@@ -74,8 +69,8 @@ body {
   text-decoration: none;
 }
 
-.contacts-nav .link:hover,
-.contacts-nav .link:focus {
+.contacts-nav-link:hover,
+.contacts-nav-link:focus {
   color: var(--accent-color);
 }
 
@@ -83,9 +78,12 @@ body {
 /* Добавил цвет фона в hero-title для того, 
 чтобы увидеть текст */
 
+.hero {
+  background-color: var(--footer-bg-color);
+}
+
 .hero-title {
   color: var(--secondary-text-color);
-  background-color: var(--footer-bg-color);
 
   font-weight: 900;
   font-size: 44px;
@@ -108,7 +106,7 @@ body {
 
 /* Features */
 
-.features-list .title {
+.features-list-title {
   color: var(--title-text-color);
 
   font-weight: 700;
@@ -117,7 +115,7 @@ body {
   text-transform: uppercase;
 }
 
-.features-list .text {
+.features-list-text {
   font-weight: 400;
   font-size: 14px;
   line-height: 1.71;
@@ -125,7 +123,7 @@ body {
 
 /* Team */
 
-.team-list .title {
+.team-list-title {
   color: var(--title-text-color);
 
   font-weight: 500;
@@ -133,7 +131,7 @@ body {
   line-height: 1.19;
 }
 
-.team-list .text {
+.team-list-text {
   font-weight: 400;
   font-size: 16px;
   line-height: 1.19;
@@ -149,10 +147,10 @@ body {
   background-color: var(--footer-bg-color);
 }
 
-.footer .logo {
+.footer-logo {
   color: var(--secondary-text-color);
 }
-.address-list .link {
+.address-list-link {
   color: rgba(255, 255, 255, 0.6);
 
   font-family: Roboto;
@@ -163,12 +161,12 @@ body {
   text-decoration: none;
 }
 
-.link.map {
+.address-list-link.map {
   color: var(--secondary-text-color);
 }
 
-.address-list .link:hover,
-.address-list .link:focus {
+.address-list-link:hover,
+.address-list-link:focus {
   color: var(--accent-color);
 }
 
@@ -178,39 +176,45 @@ body {
   color: var(--title-text-color);
   background-color: var(--secondary-bg-color);
 
+  border: none;
+  border-radius: 4px;
+
   font-family: inherit;
   cursor: pointer;
 }
 
-.button.primary {
+.hero-button {
   color: var(--secondary-text-color);
   background-color: var(--accent-color);
 
   font-weight: 700;
   font-size: 16px;
   line-height: 1.87;
-  display: flex;
   align-items: center;
   text-align: center;
   letter-spacing: 0.06em;
 }
 
-.button.secondary {
+.portfolio-filter-button {
   font-weight: 500;
   font-size: 16px;
   line-height: 1.62;
   text-align: center;
 }
 
+.current-button {
+  background-color: var(--accent-color);
+}
+
 /* Portfolio */
 
-.portfolio-filter .button:hover,
-.portfolio-filter .button:focus {
+.portfolio-filter-button:hover,
+.portfolio-filter-button:focus {
   color: var(--secondary-text-color);
   background-color: var(--accent-color);
 }
 
-.work-examples-list .title {
+.work-examples-list-title {
   color: var(--title-text-color);
 
   font-weight: 700;
@@ -219,7 +223,7 @@ body {
   letter-spacing: 0.06em;
 }
 
-.work-examples-list .text {
+.work-examples-list-text {
   font-weight: 400;
   font-size: 16px;
   line-height: 1.87;
